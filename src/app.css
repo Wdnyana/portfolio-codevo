@@ -1,0 +1,124 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@theme {
+	/* --- COLORS --- */
+	/* Backgrounds */
+	--color-void: #09090b;
+	--color-panel: #18181b;
+
+	/* Text & Accents */
+	--color-primary: #f4f4f5; /* Main Text color (Zinc-100) */
+	--color-text-muted: #a1a1aa;
+
+	/* Brand Accents */
+	--color-accent: #3b82f6;
+	--color-quark-beam: #3b82f6; /* Java/Quarkus Identity */
+	--color-core-heat: #f97316; /* Construct/Safety Identity */
+
+	/* Borders & Lines */
+	--color-border: #27272a;
+
+	/* --- FONTS --- */
+	/* Body Text - UPDATED: Menggunakan IBM Plex Sans */
+	--font-sans: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+
+	/* Headings/Display */
+	--font-display: 'Space Grotesk', sans-serif;
+
+	/* Code/Technical */
+	--font-mono: 'JetBrains Mono', monospace;
+
+	/* --- ANIMATIONS --- */
+	--animate-fade-in: fade-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+	--animate-fade-up: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+	--animate-shimmer: shimmer 2s linear infinite;
+
+	@keyframes fade-in {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	@keyframes fade-up {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	@keyframes shimmer {
+		from {
+			background-position: 0 0;
+		}
+		to {
+			background-position: -200% 0;
+		}
+	}
+}
+
+/* UTILITIES */
+.stagger-1 > *:nth-child(1) {
+	animation-delay: 100ms;
+}
+.stagger-1 > *:nth-child(2) {
+	animation-delay: 200ms;
+}
+.stagger-1 > *:nth-child(3) {
+	animation-delay: 300ms;
+}
+.stagger-1 > *:nth-child(4) {
+	animation-delay: 400ms;
+}
+
+/* Efek Scanline */
+.scanline-overlay {
+	background: linear-gradient(
+		to bottom,
+		rgba(255, 255, 255, 0),
+		rgba(255, 255, 255, 0) 50%,
+		rgba(0, 0, 0, 0.1) 50%,
+		rgba(0, 0, 0, 0.1)
+	);
+	background-size: 100% 4px;
+	pointer-events: none;
+}
+
+/* Base Styles */
+:root {
+	color-scheme: dark;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+	animation-duration: 0.4s;
+}
+
+body {
+	background-color: var(--color-void);
+	color: var(--color-primary);
+	font-family: var(--font-sans); /* Sekarang otomatis pakai IBM Plex Sans */
+	-webkit-font-smoothing: antialiased;
+
+	/* OPTIONAL: Menambah readability global */
+	line-height: 1.6;
+}
+
+/* Utility Class untuk efek Grid Lab */
+.lab-grid {
+	background-size: 40px 40px;
+	background-image:
+		linear-gradient(to right, var(--color-border) 1px, transparent 1px),
+		linear-gradient(to bottom, var(--color-border) 1px, transparent 1px);
+	mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+	pointer-events: none;
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+}
