@@ -8,13 +8,23 @@
 	import '@fontsource/jetbrains-mono/400.css'
 	import '@fontsource/jetbrains-mono/500.css'
 	import '@fontsource/jetbrains-mono/700.css'
+	import '@fontsource/ibm-plex-sans/400.css'
+	import '@fontsource/ibm-plex-sans/500.css'
+	import '@fontsource/ibm-plex-sans/600.css'
 	import favicon from '$lib/assets/favicon.svg'
 
 	import Navbar from '$lib/components/organisms/Navbar.svelte'
 	import Footer from '$lib/components/organisms/Footer.svelte'
+	import SkipLink from '$lib/components/atoms/SkipLink.svelte'
+	import { inject } from '@vercel/analytics'
 	import { onNavigate } from '$app/navigation'
+	import { onMount } from 'svelte'
 
 	let { children } = $props()
+
+	onMount(() => {
+		inject()
+	})
 
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return
@@ -78,11 +88,12 @@
 </svelte:head>
 
 <div class="relative flex min-h-screen flex-col">
+	<SkipLink />
 	<Navbar />
 
 	<div class="lab-grid fixed inset-0 z-[-1]"></div>
 
-	<main class="w-full flex-1 px-3 pt-20 lg:px-12">
+	<main id="main-content" class="w-full flex-1 px-3 pt-20 lg:px-12">
 		{@render children()}
 	</main>
 

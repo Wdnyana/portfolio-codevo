@@ -32,8 +32,8 @@
 				<a
 					href={item.href}
 					class={cn(
-						'text-sm font-medium tracking-wider transition-colors duration-200 hover:text-quark-beam font-display',
-						$page.url.pathname === item.href ? 'text-quark-beam' : 'text-primary/80',
+						'text-sm font-medium tracking-wider transition-all duration-200 font-display hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]',
+						$page.url.pathname === item.href ? 'text-quark-beam' : 'text-zinc-400',
 					)}
 				>
 					{item.label}
@@ -45,7 +45,7 @@
 		<div class="flex md:hidden">
 			<button
 				type="button"
-				class="text-primary hover:text-white focus:outline-none"
+				class="text-primary hover:text-white focus:outline-none transition-all duration-150 active:scale-95"
 				onclick={toggleMenu}
 				aria-label="Toggle menu"
 			>

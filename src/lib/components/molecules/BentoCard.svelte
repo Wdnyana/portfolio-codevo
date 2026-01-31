@@ -8,7 +8,7 @@
 <div
 	use:spotlight
 	class={cn(
-		'group relative flex h-full flex-col justify-between overflow-hidden rounded-xl border border-border bg-panel/50 p-6 transition-colors duration-300 hover:border-blue-500/50',
+		'group relative flex h-full flex-col justify-between overflow-hidden rounded-xl border border-white/10 bg-panel/50 p-6 transition-all duration-300 ease-out hover:border-white/30 hover:-translate-y-1',
 		className,
 	)}
 	style="animation-delay: {delay}ms; animation-fill-mode: forwards;"
@@ -25,7 +25,7 @@
 
 	<div class="relative z-10 flex h-full flex-col justify-between">
 		{#if Icon}
-			<div class="mb-4 text-quark-beam">
+			<div class="mb-4 text-quark-beam transition-all duration-300 group-hover:text-white group-hover:scale-110 group-hover:bg-white/10 rounded-lg w-fit p-2 -m-2">
 				<Icon size={32} />
 			</div>
 		{/if}
