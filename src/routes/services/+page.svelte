@@ -5,9 +5,6 @@
 
 	let { data } = $props()
 
-	// DEBUG: Log data dari Sanity untuk memeriksa iconName
-	console.log('🔍 [DEBUG] Data Services dari Sanity:', data.services)
-
 	// Icon mapping: Explicit string-to-component mapping
 	// Includes both PascalCase and lowercase for case-insensitive matching
 	const iconMap: Record<string, ComponentType> = {

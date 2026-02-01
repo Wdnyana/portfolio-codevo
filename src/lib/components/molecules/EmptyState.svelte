@@ -9,7 +9,7 @@
 		icon?: any
 	}
 
-	let { title, message, actionLink, actionLabel, icon = Construction }: Props = $props()
+	let { title, message, actionLink, actionLabel, icon: Icon = Construction }: Props = $props()
 </script>
 
 <div class="flex min-h-[60vh] items-center justify-center px-4 py-20">
@@ -29,8 +29,7 @@
 				<div
 					class="rounded-2xl border border-white/5 bg-void/50 p-6 shadow-lg animate-bounce-slow"
 				>
-					<svelte:component
-						this={icon}
+					<Icon
 						class="h-12 w-12 text-zinc-400 transition-colors duration-300 group-hover:text-quark-beam/80"
 					/>
 				</div>

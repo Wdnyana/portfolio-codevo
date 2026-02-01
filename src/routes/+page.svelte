@@ -6,9 +6,6 @@
 
 	let { data }: { data: PageData } = $props()
 
-	// DEBUG: Log filtered home services untuk verifikasi
-	console.log('🔍 [DEBUG] Home Services (Filtered):', data.homeServices)
-
 	// Icon mapping: Explicit string-to-component mapping
 	// Includes both PascalCase and lowercase for case-insensitive matching
 	const iconMap: Record<string, ComponentType> = {

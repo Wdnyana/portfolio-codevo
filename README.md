@@ -222,7 +222,7 @@ pnpm sanity:dev
    ```
    This creates a hosted Studio at: `https://your-project.sanity.studio`
 
-### CORS Configuration
+### CORS Configuratiodev.codevo@gmail.comn
 
 Add your production domain to Sanity CORS origins:
 
@@ -332,7 +332,7 @@ This project is proprietary and confidential. All rights reserved © 2026 Codevo
 **Codevo Solutions**  
 📍 Bali, Indonesia  
 🌐 [codevosolutions.com](https://codevosolutions.com)  
-📧 hello@codevosolutions.com
+📧 dev.codevo@gmail.com
 
 ---
 

@@ -12,8 +12,8 @@
 
 	let { href, children }: Props = $props()
 
-	// Check if link is external
-	const isExternal = href.startsWith('http') || href.startsWith('//')
+	// Check if link is external - using $derived() for reactivity
+	let isExternal = $derived(href.startsWith('http') || href.startsWith('//'))
 </script>
 
 <a
