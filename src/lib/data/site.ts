@@ -4,8 +4,8 @@ export const siteConfig = {
 	description: 'Founder-Led Software Laboratory based in Bali.',
 	descriptionLong:
 		'High-Performance SaaS Development, AI Automation, and Legacy System Modernization. Expert SvelteKit architecture and modern web solutions based in Bali, Indonesia.',
-	url: 'https://codevosolutions.com',
-	ogImage: 'https://codevosolutions.com/og-image.png',
+	url: 'https://www.codevosolutions.com',
+	ogImage: 'https://www.codevosolutions.com/og-image.png',
 	keywords: [
 		'SvelteKit Development',
 		'SaaS Development Bali',
