@@ -110,6 +110,19 @@ body {
 	line-height: 1.6;
 }
 
+/* Hide native cursor on desktop (custom cursor only) */
+@media (hover: hover) and (pointer: fine) {
+	body {
+		cursor: none;
+	}
+
+	a,
+	button,
+	.hover-trigger {
+		cursor: none;
+	}
+}
+
 /* Utility Class untuk efek Grid Lab */
 .lab-grid {
 	background-size: 40px 40px;
